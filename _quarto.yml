@@ -1,0 +1,26 @@
+project:
+  type: website
+
+website:
+  title: "ImgLib2 and BigDataviewer projects"
+  navbar:
+    right:
+      - href: posts.qmd
+        text: Blog
+      - href: index.qmd
+        text: Learning Resources
+      - href: index.qmd
+        text: Ecosystem
+      - href: Blog.qmd
+        text: Contributing Guidelines
+      - about.qmd
+      
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+
