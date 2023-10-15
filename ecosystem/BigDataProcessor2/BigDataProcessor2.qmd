@@ -17,11 +17,9 @@ about:
 
  ![](BDP2-icon.png){width=200}
  
-# Load some data
+# Load some data - title
 
-```{r}
-data(mtcars)
-```
-
-Now, we register a simple renderer that uses [ImgLib2's ImageJ bridge](https://github.com/imglib/imglib2-ij/blob/master/src/main/java/net/imglib2/img/display/imagej/ImageJFunctions.java) and [Spencer Park's image renderer](https://github.com/SpencerPark/jupyter-jvm-basekernel/blob/master/src/main/java/io/github/spencerpark/jupyter/kernel/display/common/Image.java) to render the first 2D slice of a `RandomAccessibleInterval` into the notebook.  We also add a renderer for arrays and maps, because we want to list directories and attributes maps later."
- 
+Now, we register a simple renderer that uses [ImgLib2's ImageJ bridge](https://github.com/imglib/imglib2-ij/blob/master/src/main/java/net/imglib2/img/display/imagej/ImageJFunctions.java)
+and [Spencer Park's image renderer](https://github.com/SpencerPark/jupyter-jvm-basekernel/blob/master/src/main/java/io/github/spencerpark/jupyter/kernel/display/common/Image.java)
+to render the first 2D slice of a `RandomAccessibleInterval` into the notebook. We also
+add a renderer for arrays and maps, because we want to list directories and attributes maps later.
