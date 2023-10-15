@@ -1,5 +1,5 @@
 ---
-title: "Ecosystem"
+title: "Blog"
 listing:
   contents: blog_posts/*/*.qmd      # all Quarto qmd docs in the `posts` directory will be included on your listing page
   sort: "date desc"                 # can also sort on more than one field
