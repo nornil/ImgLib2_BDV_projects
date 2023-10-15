@@ -38,4 +38,4 @@ title-block-banner: true
 
 ## References 
  - **Publication** : Pietzsch, T., Saalfeld, S., Preibisch, S., & Tomancak, P. (2015). BigDataViewer: Visualization and Processing for Large Image Data Sets. Nature Methods, 12(6), 481–483.,[doi:10.1038/nmeth.3392](https://doi:10.1038/nmeth.3392)
-- See also [ImgLib2 Resources](link_list_ImgLib2.md)
+- See also [ImgLib2 Resources](imglib2_links.qmd)
