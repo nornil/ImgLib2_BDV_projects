@@ -5,9 +5,9 @@ website:
   title: "ImgLib2 and BigDataviewer projects"
   navbar:
     right:
-      - href: posts.qmd
-        text: Blog
-      - text: Learning Resources  
+      - text: Blog
+        href: blog.qmd
+      - text: Learning Resources
         menu:
              - text: "ImgLib2 links"
                icon: "info-square"
@@ -15,8 +15,8 @@ website:
              - text: "BigDataViewer links"
                icon: "info-square"
                href: "index"
-      - href: ecosystem.qmd
-        text: Ecosystem  
+      - text: Ecosystem
+        href: ecosystem.qmd
       - text: Contributing Guidelines
         menu:
              - text: "Guidelines for ImgLib2"
@@ -28,13 +28,10 @@ website:
              - text: "Our Code-of-conduct"
                icon: "peace"
                href: "index.qmd"
-      
 
 format:
   html:
     theme: cosmo
     css: styles.css
     toc: true
-
-
 
