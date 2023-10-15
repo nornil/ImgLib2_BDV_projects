@@ -3,6 +3,8 @@ title: "How to work with the N5 API and ImgLib2?"
 author: "Stephan Saalfeld"
 date: "2023-09-27"
 categories: [ imglib2 , n5,   hdf5 ,  zarr  , jupyter,   notebook] 
+execute:
+  echo: false
 ---
 
 In this notebook, we will learn how to work with the [N5 API](https://github.com/saalfeldlab/n5) and [ImgLib2](https://imglib2.net).\n",
@@ -13,8 +15,29 @@ In this notebook, we will learn how to work with the [N5 API](https://github.com
     "\n",
     "First let's add the necessary dependencies.  We will load the [`n5-ij` module](https://github.com/saalfeldlab/n5-ij) which will transitively load [ImgLib2](https://imglib2.net) and all the N5 API modules that we will be using in this notebook.  It will also load [ImageJ](https://imagej.nih.gov/ij/) which we will use to display data."
    
+
 <a href="https://colab.research.google.com/github/jfrench/LinearRegression/blob/master/notebooks/z-oer-demo-notebook.ipynb"> <img src="https://colab.research.google.com/assets/colab-badge.svg"/> </a>
 
+
+``` 
+%%loadFromPOM
+<repository>
+    <id>scijava.public</id>
+    <url>https://maven.scijava.org/content/groups/public</url>
+</repository>
+<dependency>
+    <groupId>org.janelia.saalfeldlab</groupId>
+    <artifactId>n5</artifactId>
+    <version>2.5.1</version>
+</dependency>
+<dependency>
+    <groupId>org.janelia.saalfeldlab</groupId>
+    <artifactId>n5-ij</artifactId>
+    <version>3.2.2</version>
+</dependency>
+```
+
+ 
 # Load some data
 
 ```{r}

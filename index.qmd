@@ -1,7 +1,27 @@
 ---
-title: "ImgLib2_BDV_projects"
+title: " "
+about: 
+  id: Aheading
+  template: jolla
+  image-shape: rounded
+  image-width: 15em
+  links:
+    - text: Contact
+      icon: envelope
+      href: mailto:anemail@adress.com
+    - text: GitHub_ImgLib2
+      icon: github
+      href: https://github.com/ImgLib2
+    - text: GitHub_BigDataViewer
+      icon: github
+      href: https://github.com/Bigdataviewer
 ---
 
-This is a Quarto website.
+
+![](imglib2.jpg){fig-align="center"}
+
+## This is the joint landing page for ImgLib2 and BigDataViewer projects!
+
+
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.

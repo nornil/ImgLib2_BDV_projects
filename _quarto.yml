@@ -7,11 +7,11 @@ website:
     right:
       - href: posts.qmd
         text: Blog
-      - href: index.qmd
+      - href: index.qmd  
         text: Learning Resources
+      - href: ecosystem.qmd
+        text: Ecosystem  
       - href: index.qmd
-        text: Ecosystem
-      - href: Blog.qmd
         text: Contributing Guidelines
       - about.qmd
       

@@ -1,7 +1,12 @@
 {
   "listingMap": {
     "posts.qmd": [
-      "posts"
+      "posts",
+      "posts/**/*.qmd"
+    ],
+    "ecosystem.qmd": [
+      "posts",
+      "ecosystem"
     ]
   }
 }

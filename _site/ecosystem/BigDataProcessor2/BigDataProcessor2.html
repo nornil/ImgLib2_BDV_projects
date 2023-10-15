@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ImgLib2 and BigDataviewer projects - How to work with the N5 API and ImgLib2?</title>
+<title>ImgLib2 and BigDataviewer projects - BigDataProcessor2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
@@ -112,66 +111,51 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">How to work with the N5 API and ImgLib2?</h1>
-                      </div>
+      <h1 class="title">BigDataProcessor2</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">imglib2</div>
+                <div class="quarto-category">n5</div>
+                <div class="quarto-category">hdf5</div>
+                <div class="quarto-category">zarr</div>
+                <div class="quarto-category">jupyter</div>
+                <div class="quarto-category">notebook</div>
+              </div>
+                  </div>
   </div>
-    
-  
   <div class="quarto-title-meta">
-
-      
-    
-      
     </div>
-    
-  
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+  <ul>
+  <li><a href="#load-some-data" id="toc-load-some-data" class="nav-link active" data-scroll-target="#load-some-data">Load some data</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<div class="quarto-about-jolla">
+ <main class="content quarto-banner-title-block" id="quarto-document-content">
+
+<p><img src="BDP2-icon.png" class="img-fluid" width="200"></p>
+<section id="load-some-data" class="level1">
+<h1>Load some data</h1>
+<p>Now, we register a simple renderer that uses <a href="https://github.com/imglib/imglib2-ij/blob/master/src/main/java/net/imglib2/img/display/imagej/ImageJFunctions.java">ImgLib2’s ImageJ bridge</a> and <a href="https://github.com/SpencerPark/jupyter-jvm-basekernel/blob/master/src/main/java/io/github/spencerpark/jupyter/kernel/display/common/Image.java">Spencer Park’s image renderer</a> to render the first 2D slice of a <code>RandomAccessibleInterval</code> into the notebook. We also add a renderer for arrays and maps, because we want to list directories and attributes maps later.”</p>
 
 
-
-
-<blockquote class="blockquote">
-<p>Read and write ImgLib2 data with the N5 API</p>
-</blockquote>
-<ul>
-<li>toc: false</li>
-<li>branch: master</li>
-<li>badges: true</li>
-<li>comments: true</li>
-<li>author: Stephan Saalfeld</li>
-<li>categories: [imglib2, n5, hdf5, zarr, jupyter, notebook]</li>
-</ul>
-<p>In this notebook, we will learn how to work with the <a href="https://github.com/saalfeldlab/n5">N5 API</a> and <a href="https://imglib2.net">ImgLib2</a>.</p>
-<p>The N5 API unifies block-wise access to potentially very large <em>n</em>-dimensional data over a variety of storage backends. Those backends currently are the simple <a href="https://github.com/saalfeldlab/n5#file-system-specification">N5 format on the local filesystem</a>, <a href="https://github.com/saalfeldlab/n5-google-cloud">Google Cloud</a> and <a href="https://github.com/saalfeldlab/n5-aws-s3">AWS-S3</a>, the <a href="https://www.hdfgroup.org/solutions/hdf5/">HDF5 file format</a> and <a href="https://github.com/saalfeldlab/n5-zarr">Zarr</a>. The <a href="https://github.com/saalfeldlab/n5-imglib2">ImgLib2 bindings</a> use this API to make this data available as memory cached lazy cell images through ImgLib2.</p>
-<p>This notebook uses code and data examples from the <a href="https://www.janelia.org/sites/default/files/You%20%2B%20Janelia/Conferences/3.pdf">ImgLib2 large data tutorial</a> <a href="https://www.janelia.org/you-janelia/conferences/from-images-to-knowledge-with-imagej-friends">I2K2020 workshop</a> (<a href="https://github.com/saalfeldlab/i2k2020-imglib2-advanced">GitHub repository</a>).</p>
-<p>First let’s add the necessary dependencies. We will load the <a href="https://github.com/saalfeldlab/n5-ij"><code>n5-ij</code> module</a> which will transitively load <a href="https://imglib2.net">ImgLib2</a> and all the N5 API modules that we will be using in this notebook. It will also load <a href="https://imagej.nih.gov/ij/">ImageJ</a> which we will use to display data.</p>
-<pre><code>%%loadFromPOM
-&lt;repository&gt;
-    &lt;id&gt;scijava.public&lt;/id&gt;
-    &lt;url&gt;https://maven.scijava.org/content/groups/public&lt;/url&gt;
-&lt;/repository&gt;
-&lt;dependency&gt;
-    &lt;groupId&gt;org.janelia.saalfeldlab&lt;/groupId&gt;
-    &lt;artifactId&gt;n5&lt;/artifactId&gt;
-    &lt;version&gt;2.5.1&lt;/version&gt;
-&lt;/dependency&gt;
-&lt;dependency&gt;
-    &lt;groupId&gt;org.janelia.saalfeldlab&lt;/groupId&gt;
-    &lt;artifactId&gt;n5-ij&lt;/artifactId&gt;
-    &lt;version&gt;3.2.2&lt;/version&gt;
-&lt;/dependency&gt;</code></pre>
-<p>Now, we register a simple renderer that uses <a href="https://github.com/imglib/imglib2-ij/blob/master/src/main/java/net/imglib2/img/display/imagej/ImageJFunctions.java">ImgLib2’s ImageJ bridge</a> and <a href="https://github.com/SpencerPark/jupyter-jvm-basekernel/blob/master/src/main/java/io/github/spencerpark/jupyter/kernel/display/common/Image.java">Spencer Park’s image renderer</a> to render the first 2D slice of a <code>RandomAccessibleInterval</code> into the notebook. We also add a renderer for arrays and maps, because we want to list directories and attributes maps later.</p>
-
-
-
-</main> <!-- /main -->
+</section>
+</main> 
+  <hr class="about-sep">
+   <div class="about-links">
+  <a href="mailto:anemail@adress.com" class="about-link" rel="" target="">
+    <i class="bi bi-envelope"></i>
+     <span class="about-link-text">Contact</span>
+  </a>
+</div>
+</div>
+ <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -192,13 +176,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
