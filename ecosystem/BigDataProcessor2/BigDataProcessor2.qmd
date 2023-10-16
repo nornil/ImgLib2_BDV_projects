@@ -26,16 +26,17 @@ about:
       href: https://imagej.net/plugins/big-data-processor-2
 ---
 
- ![](BDP2-icon.png){width=200}
+::: {.alignleft}
+![](BDP2-icon.png){width=275}
  
 BigDataProcessor2 (BDP2) is a Fiji plugin for interactive processing of TB-sized image data.
 
 BDP2 uses BigDataViewer for rendering and the ImgLib2 library for image processing.
-
 The BDP2 is the new version of BigDataProcessor1.
 
 Main features:
 
-lazy-loading of TB sized image data
-lazy-processing of TB sized image data
-ImageJ macro scripting support
+- lazy-loading of TB sized image data
+- lazy-processing of TB sized image data
+- ImageJ macro scripting support
+:::
