@@ -1,7 +1,7 @@
 project:
   type: website
   output-dir: WWW_CONTENT
-
+  
 website:
   title: "ImgLib2 and BigDataviewer projects"
   navbar:
@@ -34,5 +34,5 @@ format:
   html:
     theme: cosmo
     css: styles.css
-    toc: true
+    toc: false
 
