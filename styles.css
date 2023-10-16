@@ -2,6 +2,11 @@
 .dropdown:hover>.dropdown-menu {
   display: block;
 }
+
+.navbar-title {
+  font-size: 40px
+}
+
 .alignleft {
   text-align: left
 }
