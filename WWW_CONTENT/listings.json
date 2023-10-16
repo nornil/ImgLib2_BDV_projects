@@ -10,6 +10,10 @@
     ]
   },
   {
+    "listing": "/contributing_guidelines/guidelines_for_imglib2.html",
+    "items": []
+  },
+  {
     "listing": "/contributing_guidelines/guidelines_for_bigdataviewer.html",
     "items": []
   },
@@ -22,14 +26,10 @@
     "items": []
   },
   {
-    "listing": "/contributing_guidelines/guidelines_for_imglib2.html",
-    "items": []
-  },
-  {
     "listing": "/ecosystem.html",
     "items": [
-      "/ecosystem/BigDataProcessor2/BigDataProcessor2.html",
-      "/ecosystem/Mastodon/Mastodon.html"
+      "/ecosystem/Mastodon/Mastodon.html",
+      "/ecosystem/BigDataProcessor2/BigDataProcessor2.html"
     ]
   }
 ]

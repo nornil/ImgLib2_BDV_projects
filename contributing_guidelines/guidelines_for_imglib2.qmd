@@ -35,7 +35,8 @@ Thank you for considering contributing to the BigDataViewer open source project!
 ## Governance
 
 Founders: Stephan Saalfeld, Stephan Preibisch
-Leads: Tobias Pietzsch, Stephan Preibisch, Stephan Saalfeld – Pietzsch leads on day to day issues. Pietzsch, Preibisch and Saalfeld vote on primary decisions, with Pietzsch’s vote breaking ties.
+Leads: Tobias Pietzsch, Stephan Preibisch, Stephan Saalfeld – Pietzsch leads on day to day issues. 
+Pietzsch, Preibisch and Saalfeld vote on primary decisions, with Pietzsch’s vote breaking ties.
 Maintainers: Tobias Pietzsch, Curtis Rueden, Stephan Preibisch, Stephan Saalfeld
 
 And the team role definitions:

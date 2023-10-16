@@ -3,9 +3,9 @@
 title: "Contributing Guidelines BigDataViewer" 
 listing:
   contents:    BigDataViewer            # all Quarto docs in the `posts` directory will be included on your listing page
-  sort: ""                          # can also sort on more than one field
-  type: default                     # or `default` or `table`; each type has its own set of yaml options to include
-  categories: true                  # allows you to sort posts by assigned categories
+  sort: ""                              # can also sort on more than one field
+  type: default                         # or `default` or `table`; each type has its own set of yaml options to include
+  categories: true                      # allows you to sort posts by assigned categories
   sort-ui: false
   filter-ui: false
 page-layout: full
@@ -33,7 +33,11 @@ Thank you for considering contributing to the BigDataViewer open source project!
 - [License](#license)
 
 ## Governance
- 
+
+Founder: Tobias Pietzsch
+Lead: Tobias Pietzsch
+Maintainers: Tobias Pietzsch, Stephan Preibisch
+
 And the team role definitions:
 Founder - Created the project. Does not imply any current participation or responsibility.
 Lead - Has decision-making authority: timing of releases, inclusion of features, etc.
@@ -58,7 +62,7 @@ Please see the general guidlines on how to contribute to an existing plugin or l
 
 ### Creating Issues
 
-If you find a bug, have a feature request, or encounter any issues, please search our [ImgLib2 issue tracker](https://github.com/imglib/imglib2/issues) and [BDV issue tracker](https://github.com/bigdataviewer/bigdataviewer-core/issues) to see if it has already been reported. If not, feel free to create a new issue and provide as much detail as possible. 
+If you find a bug, have a feature request, or encounter any issues, please search our [BDV issue tracker](https://github.com/bigdataviewer/bigdataviewer-core/issues) to see if it has already been reported. If not, feel free to create a new issue and provide as much detail as possible. 
 
 ### Working on Issues
 
@@ -100,4 +104,4 @@ Join in our community discussions on [imagesc.zulipchat.com](https://imagesc.zul
 
 ## License
 
-By contributing to this project, you agree that your contributions will be licensed under the project's license [ImgLib2 license](https://github.com/imglib/imglib2/blob/master/LICENSE.txt) and [BigDataViewer license](https://github.com/bigdataviewer/bigdataviewer-core/blob/master/LICENSE.txt) a BSD 2-Clause "Simplified" License. If you're not comfortable with this, please consider refrain from contributing. 
+By contributing to this project, you agree that your contributions will be licensed under the project's license [BigDataViewer license](https://github.com/bigdataviewer/bigdataviewer-core/blob/master/LICENSE.txt) a BSD 2-Clause "Simplified" License. If you're not comfortable with this, please consider refrain from contributing. 

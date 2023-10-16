@@ -8,7 +8,7 @@ about:
   links:
     - text: GitHub_ImgLib2
       icon: github
-      href: https://github.com/ImgLib2
+      href: https://github.com/ImgLib
     - text: GitHub_BigDataViewer
       icon: github
       href: https://github.com/Bigdataviewer
