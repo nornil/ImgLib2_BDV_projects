@@ -4,14 +4,14 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "How to work with the N5 API and ImgLib2?\n\n\n\n\n\n\n\nimglib2\n\n\nn5\n\n\nhdf5\n\n\nzarr\n\n\njupyter\n\n\nnotebook\n\n\n\n\n\n\n\n\n\n\n\nSep 27, 2022\n\n\nStephan Saalfeld\n\n\n\n\n\n\n  \n\n\n\n\nHow to display ImgLib2 data in a notebook\n\n\n\n\n\n\n\nimglib2\n\n\njupyter\n\n\nnotebook\n\n\n\n\n\n\n\n\n\n\n\nSep 14, 2022\n\n\nStephan Saalfeld\n\n\n\n\n\n\n  \n\n\n\n\nUser-configurable Keymaps\n\n\n\n\n\n\n\nui-behaviour\n\n\nbigdataviewer\n\n\n\n\n\n\n\n\n\n\n\nAug 8, 2022\n\n\nStephan Saalfeld\n\n\n\n\n\n\n  \n\n\n\n\nSetup the IJava jupyter kernel\n\n\n\n\n\n\n\njupyter\n\n\nijava\n\n\njshell\n\n\njava\n\n\nkernel\n\n\n\n\n\n\n\n\n\n\n\nJun 5, 2022\n\n\nStephan Saalfeld\n\n\n\n\n\n\n  \n\n\n\n\nJuliaset Lambda\n\n\n\n\n\n\n\nimglib2\n\n\nlambda\n\n\nfractal\n\n\njuliaset\n\n\nbigdataviewer\n\n\n\n\n\n\n\n\n\n\n\nMay 2, 2022\n\n\nStephan Saalfeld\n\n\n\n\n\n\nNo matching items"
+    "text": "How to work with the N5 API and ImgLib2?\n\n\n\n\n\n\n\nimglib2\n\n\nn5\n\n\nhdf5\n\n\nzarr\n\n\njupyter\n\n\nnotebook\n\n\n\n\n\n\n\n\n\n\n\nSep 27, 2022\n\n\nStephan Saalfeld\n\n\n\n\n\n\n  \n\n\n\n\nHow to display ImgLib2 data in a notebook\n\n\n\n\n\n\n\nimglib2\n\n\njupyter\n\n\nnotebook\n\n\n\n\n\n\n\n\n\n\n\nSep 14, 2022\n\n\nStephan Saalfeld\n\n\n\n\n\n\n  \n\n\n\n\nUser-configurable Keymaps\n\n\n\n\n\n\n\nui-behaviour\n\n\nbigdataviewer\n\n\n\n\n\n\n\n\n\n\n\nAug 8, 2022\n\n\nTobias Pietzsch\n\n\n\n\n\n\n  \n\n\n\n\nSetup the IJava jupyter kernel\n\n\n\n\n\n\n\njupyter\n\n\nijava\n\n\njshell\n\n\njava\n\n\nkernel\n\n\n\n\n\n\n\n\n\n\n\nJun 5, 2022\n\n\nStephan Saalfeld\n\n\n\n\n\n\n  \n\n\n\n\nJuliaset Lambda\n\n\n\n\n\n\n\nimglib2\n\n\nlambda\n\n\nfractal\n\n\njuliaset\n\n\nbigdataviewer\n\n\n\n\n\n\n\n\n\n\n\nMay 2, 2022\n\n\nStephan Saalfeld\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "contributing_guidelines/guidelines_for_imglib2.html",
     "href": "contributing_guidelines/guidelines_for_imglib2.html",
-    "title": "ImgLib2 and BigDataviewer projects",
+    "title": "Contributing Guidelines ImgLib2",
     "section": "",
-    "text": "guidelines_for_imglib2 content comes here…"
+    "text": "Thank you for considering contributing to the BigDataViewer open source project! By contributing, you are helping to improve and grow the software for everyone in the community. We appreciate your time and effort.\n\n\n\nGovernance\n\nCode of Conduct\n\nGetting Started\n\nPrerequisites & Setting up the Development Environment\n\nMaking Contributions\n\nCreating Issues\nWorking on Issues\nSubmitting Pull Requests\n\nCode Guidelines\nTesting\nDocumentation\nCommunity\nLicense\n\n\n\n\nFounders: Stephan Saalfeld, Stephan Preibisch Leads: Tobias Pietzsch, Stephan Preibisch, Stephan Saalfeld – Pietzsch leads on day to day issues. Pietzsch, Preibisch and Saalfeld vote on primary decisions, with Pietzsch’s vote breaking ties. Maintainers: Tobias Pietzsch, Curtis Rueden, Stephan Preibisch, Stephan Saalfeld\nAnd the team role definitions: Founder - Created the project. Does not imply any current participation or responsibility. Lead - Has decision-making authority: timing of releases, inclusion of features, etc. Maintainer - Merges patch submissions. Cuts releases.\n\n\n\nBefore contributing, please review our Code of Conduct. We aim to foster an inclusive and respectful community where everyone feels safe to participate.\n\n\n\n\n\nList any software, tools, libraries, or dependencies contributors need to have installed before they can contribute. Provide clear instructions or links for installation.\n\n\n\nBriefly describe the steps to set up the development environment. Include instructions for cloning the repository, installing dependencies, and any configuration that’s needed.\n\n\n\n\nPlease see the general guidlines on how to contribute to an existing plugin or library: https://imagej.net/develop/improving-the-code\n\n\nIf you find a bug, have a feature request, or encounter any issues, please search our ImgLib2 issue tracker and to see if it has already been reported. If not, feel free to create a new issue and provide as much detail as possible.\n\n\n\nIf you want to work on an existing issue, please follow these steps:\n\nComment on the issue to express your interest in working on it.\nFork the repository and create a new branch for your work.\nMake your changes and commit them with clear commit messages.\nEnsure your code follows our Code Guidelines.\nUpdate the documentation if necessary.\nRun tests to ensure your changes don’t break existing functionality.\n\n\n\n\n\nPush your changes to your forked repository.\nCreate a pull request (PR) from your branch to our main repository’s appropriate branch.\nProvide a detailed description of your changes in the PR.\nReference any related issues using keywords (e.g., “Closes #123”).\nBe ready to address feedback and make necessary changes.\n\n\n\n\n\n\nUse consistent code formatting and style throughout the project.\nFollow naming conventions for variables, functions, and classes.\nEnsure your code is well-documented.\nWrite meaningful commit messages.\n\n\n\n\nExplain how to run tests and provide information about the testing framework used.\n\n\n\nIf your changes introduce new features or modify existing ones, please update the documentation accordingly. This includes code comments, README files, and any additional documentation files.\n\n\n\nJoin in our community discussions on imagesc.zulipchat.com for discussions. For more general questions of broad interest and announcements the image.sc forum can be used advantageously. We welcome your feedback and ideas.\n\n\n\nBy contributing to this project, you agree that your contributions will be licensed under the project’s license ImgLib2 license a BSD 2-Clause “Simplified” License. If you’re not comfortable with this, please consider refrain from contributing."
   },
   {
     "objectID": "contributing_guidelines/guidelines_for_bigdataviewer.html",
@@ -271,5 +271,75 @@
     "title": "Ecosystem",
     "section": "",
     "text": "BigDataProcessor2\n\n\n\n\n\n\n\nFiji/ImageJ\n\n\nBigDataViewer\n\n\nhdf5\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "contributing_guidelines/guidelines_for_imglib2.html#table-of-contents",
+    "href": "contributing_guidelines/guidelines_for_imglib2.html#table-of-contents",
+    "title": "Contributing Guidelines ImgLib2",
+    "section": "",
+    "text": "Governance\n\nCode of Conduct\n\nGetting Started\n\nPrerequisites & Setting up the Development Environment\n\nMaking Contributions\n\nCreating Issues\nWorking on Issues\nSubmitting Pull Requests\n\nCode Guidelines\nTesting\nDocumentation\nCommunity\nLicense"
+  },
+  {
+    "objectID": "contributing_guidelines/guidelines_for_imglib2.html#governance",
+    "href": "contributing_guidelines/guidelines_for_imglib2.html#governance",
+    "title": "Contributing Guidelines ImgLib2",
+    "section": "",
+    "text": "Founders: Stephan Saalfeld, Stephan Preibisch Leads: Tobias Pietzsch, Stephan Preibisch, Stephan Saalfeld – Pietzsch leads on day to day issues. Pietzsch, Preibisch and Saalfeld vote on primary decisions, with Pietzsch’s vote breaking ties. Maintainers: Tobias Pietzsch, Curtis Rueden, Stephan Preibisch, Stephan Saalfeld\nAnd the team role definitions: Founder - Created the project. Does not imply any current participation or responsibility. Lead - Has decision-making authority: timing of releases, inclusion of features, etc. Maintainer - Merges patch submissions. Cuts releases."
+  },
+  {
+    "objectID": "contributing_guidelines/guidelines_for_imglib2.html#code-of-conduct",
+    "href": "contributing_guidelines/guidelines_for_imglib2.html#code-of-conduct",
+    "title": "Contributing Guidelines ImgLib2",
+    "section": "",
+    "text": "Before contributing, please review our Code of Conduct. We aim to foster an inclusive and respectful community where everyone feels safe to participate."
+  },
+  {
+    "objectID": "contributing_guidelines/guidelines_for_imglib2.html#getting-started",
+    "href": "contributing_guidelines/guidelines_for_imglib2.html#getting-started",
+    "title": "Contributing Guidelines ImgLib2",
+    "section": "",
+    "text": "List any software, tools, libraries, or dependencies contributors need to have installed before they can contribute. Provide clear instructions or links for installation.\n\n\n\nBriefly describe the steps to set up the development environment. Include instructions for cloning the repository, installing dependencies, and any configuration that’s needed."
+  },
+  {
+    "objectID": "contributing_guidelines/guidelines_for_imglib2.html#making-contributions",
+    "href": "contributing_guidelines/guidelines_for_imglib2.html#making-contributions",
+    "title": "Contributing Guidelines ImgLib2",
+    "section": "",
+    "text": "Please see the general guidlines on how to contribute to an existing plugin or library: https://imagej.net/develop/improving-the-code\n\n\nIf you find a bug, have a feature request, or encounter any issues, please search our ImgLib2 issue tracker and to see if it has already been reported. If not, feel free to create a new issue and provide as much detail as possible.\n\n\n\nIf you want to work on an existing issue, please follow these steps:\n\nComment on the issue to express your interest in working on it.\nFork the repository and create a new branch for your work.\nMake your changes and commit them with clear commit messages.\nEnsure your code follows our Code Guidelines.\nUpdate the documentation if necessary.\nRun tests to ensure your changes don’t break existing functionality.\n\n\n\n\n\nPush your changes to your forked repository.\nCreate a pull request (PR) from your branch to our main repository’s appropriate branch.\nProvide a detailed description of your changes in the PR.\nReference any related issues using keywords (e.g., “Closes #123”).\nBe ready to address feedback and make necessary changes."
+  },
+  {
+    "objectID": "contributing_guidelines/guidelines_for_imglib2.html#code-guidelines",
+    "href": "contributing_guidelines/guidelines_for_imglib2.html#code-guidelines",
+    "title": "Contributing Guidelines ImgLib2",
+    "section": "",
+    "text": "Use consistent code formatting and style throughout the project.\nFollow naming conventions for variables, functions, and classes.\nEnsure your code is well-documented.\nWrite meaningful commit messages."
+  },
+  {
+    "objectID": "contributing_guidelines/guidelines_for_imglib2.html#testing",
+    "href": "contributing_guidelines/guidelines_for_imglib2.html#testing",
+    "title": "Contributing Guidelines ImgLib2",
+    "section": "",
+    "text": "Explain how to run tests and provide information about the testing framework used."
+  },
+  {
+    "objectID": "contributing_guidelines/guidelines_for_imglib2.html#documentation",
+    "href": "contributing_guidelines/guidelines_for_imglib2.html#documentation",
+    "title": "Contributing Guidelines ImgLib2",
+    "section": "",
+    "text": "If your changes introduce new features or modify existing ones, please update the documentation accordingly. This includes code comments, README files, and any additional documentation files."
+  },
+  {
+    "objectID": "contributing_guidelines/guidelines_for_imglib2.html#community",
+    "href": "contributing_guidelines/guidelines_for_imglib2.html#community",
+    "title": "Contributing Guidelines ImgLib2",
+    "section": "",
+    "text": "Join in our community discussions on imagesc.zulipchat.com for discussions. For more general questions of broad interest and announcements the image.sc forum can be used advantageously. We welcome your feedback and ideas."
+  },
+  {
+    "objectID": "contributing_guidelines/guidelines_for_imglib2.html#license",
+    "href": "contributing_guidelines/guidelines_for_imglib2.html#license",
+    "title": "Contributing Guidelines ImgLib2",
+    "section": "",
+    "text": "By contributing to this project, you agree that your contributions will be licensed under the project’s license ImgLib2 license a BSD 2-Clause “Simplified” License. If you’re not comfortable with this, please consider refrain from contributing."
   }
 ]
