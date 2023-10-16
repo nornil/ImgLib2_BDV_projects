@@ -29,7 +29,6 @@ website:
              - text: "Our Code-of-conduct"
                icon: "peace"
                href: "contributing_guidelines/our_code_of_conduct.qmd"
-
 format:
   html:
     theme: cosmo
