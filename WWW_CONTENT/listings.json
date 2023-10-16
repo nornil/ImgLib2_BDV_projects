@@ -22,13 +22,14 @@
     "items": []
   },
   {
-    "listing": "/ecosystem.html",
-    "items": [
-      "/ecosystem/BigDataProcessor2/BigDataProcessor2.html"
-    ]
-  },
-  {
     "listing": "/contributing_guidelines/guidelines_for_imglib2.html",
     "items": []
+  },
+  {
+    "listing": "/ecosystem.html",
+    "items": [
+      "/ecosystem/BigDataProcessor2/BigDataProcessor2.html",
+      "/ecosystem/Mastodon/Mastodon.html"
+    ]
   }
 ]

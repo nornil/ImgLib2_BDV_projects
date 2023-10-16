@@ -2,3 +2,15 @@
 .dropdown:hover>.dropdown-menu {
   display: block;
 }
+
+.navbar-title {
+  font-size: 40px
+}
+
+.menu-text {
+  font-size: 25px
+}
+
+.alignleft {
+  text-align: left
+}
