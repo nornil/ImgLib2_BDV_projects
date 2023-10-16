@@ -1,5 +1,15 @@
 [
   {
+    "listing": "/blog.html",
+    "items": [
+      "/blog_posts/2022-09-27-n5-imglib2/2022-09-27-n5-imglib2.html",
+      "/blog_posts/2022-09-14-how-to-display-imglib2-data/2022-09-14-how-to-display-imglib2-data.html",
+      "/blog_posts/2022-08-08-keymaps/2022-08-08-keymaps.html",
+      "/blog_posts/2022-06-05-setup-ijava-jupyter-kernel/2022-06-05-setup-ijava-jupyter-kernel.html",
+      "/blog_posts/2022-05-02-juliaset-lambda/2022-05-02-juliaset-lambda.html"
+    ]
+  },
+  {
     "listing": "/contributing_guidelines/guidelines_for_bigdataviewer.html",
     "items": []
   },
@@ -8,17 +18,13 @@
     "items": []
   },
   {
-    "listing": "/ecosystem.html",
-    "items": [
-      "/ecosystem/BigDataProcessor2/BigDataProcessor2.html"
-    ]
-  },
-  {
     "listing": "/learning_resources/imglib2_links.html",
     "items": []
   },
   {
-    "listing": "/blog.html",
-    "items": []
+    "listing": "/ecosystem.html",
+    "items": [
+      "/ecosystem/BigDataProcessor2/BigDataProcessor2.html"
+    ]
   }
 ]

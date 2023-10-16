@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Stephan Saalfeld">
+<meta name="dcterms.date" content="2022-06-05">
 
-<title>ImgLib2 and BigDataviewer projects - ImgLib2 Resources</title>
+<title>ImgLib2 and BigDataviewer projects - Setup the IJava jupyter kernel</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +22,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -61,50 +95,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">ImgLib2 and BigDataviewer projects</span>
     </a>
   </div>
@@ -115,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../blog.html" rel="" target="">
+    <a class="nav-link" href="../../blog.html" rel="" target="">
  <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -124,19 +127,19 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-learning-resources">    
         <li>
-    <a class="dropdown-item" href="../learning_resources/imglib2_links.html" rel="" target=""><i class="bi bi-info-square" role="img">
+    <a class="dropdown-item" href="../../learning_resources/imglib2_links.html" rel="" target=""><i class="bi bi-info-square" role="img">
 </i> 
  <span class="dropdown-text">ImgLib2 links</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../learning_resources/bigdataviewer_links.html" rel="" target=""><i class="bi bi-info-square" role="img">
+    <a class="dropdown-item" href="../../learning_resources/bigdataviewer_links.html" rel="" target=""><i class="bi bi-info-square" role="img">
 </i> 
  <span class="dropdown-text">BigDataViewer links</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../ecosystem.html" rel="" target="">
+    <a class="nav-link" href="../../ecosystem.html" rel="" target="">
  <span class="menu-text">Ecosystem</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -145,17 +148,17 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-contributing-guidelines">    
         <li>
-    <a class="dropdown-item" href="../contributing_guidelines/guidelines_for_imglib2.html" rel="" target=""><i class="bi bi-share" role="img">
+    <a class="dropdown-item" href="../../contributing_guidelines/guidelines_for_imglib2.html" rel="" target=""><i class="bi bi-share" role="img">
 </i> 
  <span class="dropdown-text">Guidelines for ImgLib2</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../contributing_guidelines/guidelines_for_bigdataviewer.html" rel="" target=""><i class="bi bi-share" role="img">
+    <a class="dropdown-item" href="../../contributing_guidelines/guidelines_for_bigdataviewer.html" rel="" target=""><i class="bi bi-share" role="img">
 </i> 
  <span class="dropdown-text">Guidelines for BigDataViewer</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../contributing_guidelines/our_code_of_conduct.html" rel="" target=""><i class="bi bi-peace" role="img">
+    <a class="dropdown-item" href="../../contributing_guidelines/our_code_of_conduct.html" rel="" target=""><i class="bi bi-peace" role="img">
 </i> 
  <span class="dropdown-text">Our Code-of-conduct</span></a>
   </li>  
@@ -171,101 +174,108 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">ImgLib2 Resources</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Setup the IJava jupyter kernel</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">jupyter</div>
+                <div class="quarto-category">ijava</div>
+                <div class="quarto-category">jshell</div>
+                <div class="quarto-category">java</div>
+                <div class="quarto-category">kernel</div>
+              </div>
+                  </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Stephan Saalfeld </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">June 5, 2022</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
-<section id="general-imglib2-resources" class="level1">
-<h1>General ImgLib2 Resources</h1>
-<ul>
-<li>Blog: <a href="https://imglib.github.io/imglib2-blog/">https://imglib.github.io/imglib2-blog/</a></li>
-<li>GitHub Repository: <a href="https://github.com/imglib/imglib2">https://github.com/imglib/imglib2</a></li>
-<li>ImageJ Documentation: <a href="https://imagej.net/libs/imglib2/">https://imagej.net/libs/imglib2/</a></li>
-</ul>
-<section id="video-lectures" class="level2">
-<h2 class="anchored" data-anchor-id="video-lectures">Video Lectures</h2>
-<ul>
-<li><strong>Albert Cardona</strong> - <em>Fast scripting with ImgLib2 in Fiji’s Script Editor</em>
-<ul>
-<li>Video: <a href="https://www.youtube.com/watch?v=vokM-yvBx8M">Watch here</a></li>
-</ul></li>
-<li><strong>Stephan Saalfeld</strong> - <em>Large data lazy processing with ImgLib2 and CLIJ2</em>
-<ul>
-<li>Video: <a href="https://www.youtube.com/watch?v=kSQI_JnQUfs">Watch here</a></li>
-</ul></li>
-</ul>
-</section>
-<section id="tutorials-and-notebooks" class="level2">
-<h2 class="anchored" data-anchor-id="tutorials-and-notebooks">Tutorials and Notebooks</h2>
-<ul>
-<li>Blog example on Jupyter Notebook: <a href="https://imglib.github.io/imglib2-blog/imglib2/jupyter/notebook/2022/09/14/how-to-display-imglib2-data.html">How to Display ImgLib2 Data</a></li>
-<li>(LOCI?) ImageJ Tutorials Jupyter Notebook1: <a href="https://github.com/imagej/tutorials/blob/master/notebooks/1-Using-ImageJ/3-ImgLib2-Basics.ipynb">ImgLib2 Basics</a></li>
-<li>(LOCI?) ImageJ Tutorials Jupyter Notebook2: <a href="https://github.com/imagej/tutorials/blob/master/notebooks/3-Advanced-Topics/2-ImgLib2-in-Detail.ipynb">ImgLib2 in Detail</a></li>
-<li>ImgLib2-intro : <a href="https://github.com/imglib/imglib2-introductory-workshop">ImgLib2 introductory workshop</a> (older)</li>
-<li>ImgLib2-advanced : <a href="https://github.com/imglib/imglib2-advanced-workshop">ImgLib2 advanced workshop</a> (older)</li>
-<li>Saalfeldlab ImgLib2-intro <a href="https://github.com/saalfeldlab/i2k2020-imglib2-intro">I2K2020 ImgLib2 Intro</a></li>
-<li>Saalfeldlab ImgLib2-advanced : <a href="https://github.com/saalfeldlab/i2k2020-imglib2-advanced">I2K2020 ImgLib2 Advanced</a></li>
-<li>Saalfeldlab i2k-tutorial: <a href="https://github.com/saalfeldlab/i2k-tutorial">I2K2020 tutorial</a> (Use N5, ImgLib2-Cache, and Spark)</li>
-<li><a href="https://imagej.net/events/learnathon-2017">DAIS learnathon</a> by Matthias Arzt: <a href="https://github.com/maarzt/imglib2-algorithm-workshop">imglib2-algorithm-workshop</a></li>
-<li><a href="https://imagej.net/events/learnathon-2017">DAIS learnathon</a> by Tobias Pietzsch: <a href="https://github.com/imglib/imglib2-cache-examples">imglib2-cache-examples</a></li>
-</ul>
-</section>
-<section id="learning-imglib2-discussions-at-image.sc" class="level2">
-<h2 class="anchored" data-anchor-id="learning-imglib2-discussions-at-image.sc">Learning ImgLib2 discussions at image.sc</h2>
-<ul>
-<li><a href="https://forum.image.sc/t/learning-imglib2-development/24833">Learning ImgLib2 Development</a></li>
-<li><a href="https://forum.image.sc/search?expanded=true&amp;q=imglib2">Other threads on Image.sc</a></li>
-<li><a href="https://imagej.net/libs/imglib2/documentation">ImgLib2 Documentation</a> on <a href="https://imagej.net/libs/imglib2">imagej.net wiki</a></li>
-</ul>
-</section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
-<ul>
-<li><strong>Publication</strong> : Tobias Pietzsch, Stephan Preibisch, Pavel Tomančák, Stephan Saalfeld, ImgLib2—generic image processing in Java, Bioinformatics, Volume 28, Issue 22, November 2012, Pages 3009–3011, <a href="https://doi.org/10.1093/bioinformatics/bts543">https://doi.org/10.1093/bioinformatics/bts543</a></li>
-<li>See also <a href="../learning_resources/bigdataviewer_links.html">BigDataViewer Resources</a></li>
-</ul>
-</section>
-<section id="uncategorized" class="level2">
-<h2 class="anchored" data-anchor-id="uncategorized">Uncategorized</h2>
-<ul>
-<li><a href="https://github.com/saalfeldlab/ntakt">nta.kt</a> (Saalfeld lab) The nta.kt library brings n-dimensional transformation and algebra to Kotlin. It combines the expressive power and flexibility of the Java image processing library ImgLib2 with the convenience and clarity that Kotlin language features provide.</li>
-<li><a href="https://github.com/maarzt/imglib2-trainable-segmentation-demo">imglib2-trainable-segmentation (random forests)</a> (Matthias Arzt, DAIS project) The repository shows example programs for segmentation of 2D and 3D images using random forests. One only needs to provide an input image and its (segmentation) labeling.</li>
-</ul>
+<p>In this blog, we will show code snippets and examples to make the best use of <a href="https://github.com/imglib/imglib2">ImgLib2</a>, <a href="https://github.com/bigdataviewer/bigdataviewer-core">BigDataViewer</a>, and friends. ImgLib2 is written to be fast and we will run code that needs to be compiled, so we cannot use any of the various interpreted scripting languages like Python, Groovy, or Javascript. Instead, we will use the <a href="https://docs.oracle.com/javase/9/jshell/introduction-jshell.htm#JSHEL-GUID-630F27C8-1195-4989-9F6B-2C51D46F52C8">JShell tool</a> that you can use directly in a terminal or through <a href="https://github.com/SpencerPark/IJava">Spencer Park’s IJava jupyter kernel</a>. You can also follow these tutorials in your own Java project and use your preferred IDE, but Jupyter notebooks are a great teaching tool. Since jupyter is written in Python and most popular with the Python community, let’s follow their ways and first thing create a virtual environment with conda. The lack of version controlled dependency management for Python projects makes it necessary that practically every project must run in a container or virtual environment because the dependencies of different projects almost inevitably collide. Conda is the most popular of several attempts to address this situation. Conda cannot currently be installed from the default Ubuntu repositories, so much about that, but the <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/rpm-debian.html">installation instructions</a> are tolerable, there is a PPA. Now let’s create an environment for jupyter:</p>
+<pre><code>conda create -n jshell-jupyter python=3
+conda init bash
+conda activate jshell-jupyter
+conda install jupyter</code></pre>
+<p>You will also need a modern Java and Maven on your system, so if you have not yet done so, install it:</p>
+<pre><code>sudo apt install openjdk-17-jdk maven</code></pre>
+<p>The original IJava kernel currently does not build with Java 17 or 18, so we use <a href="https://github.com/hanslovsky">Philipp Hanslovsky’s</a> fork and build and install both the kernel installer and the IJava Jupyter kernel:</p>
+<pre><code>git clone https://github.com/hanslovsky/Jupyter-kernel-installer-gradle.git
+cd Jupyter-kernel-installer-gradle/
+git checkout try-upgrade-gradle
+./gradlew publishToMavenLocal
+
+cd ..
+git clone https://github.com/hanslovsky/IJava.git
+cd IJava/
+git checkout hanslovsky/gradle-7.4.2
+./gradlew installKernel</code></pre>
+<p>Now check if the kernel is installed, this should print something like this</p>
+<pre><code>jupyter kernelspec list
+
+Available kernels:
+  java       /home/saalfeld/.local/share/jupyter/kernels/java
+  python3    /home/saalfeld/anaconda3/envs/jshell-jupyter/share/jupyter/kernels/python3</code></pre>
+<p>You can now start the jupyter notebook server</p>
+<pre><code>jupyter notebook --kernel=java</code></pre>
+<p>And experiment with the examples. <a href="https://github.com/SpencerPark/IJava">Spencer Park’s IJava jupyter kernel</a> makes it very easy to include dependencies. You can include the relevant snippets from a Maven POM into a tagged code block, e.g.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>%%loadFromPOM</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">repository</span>&gt;</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">id</span>&gt;scijava.public&lt;/<span class="kw">id</span>&gt;</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">url</span>&gt;https://maven.scijava.org/content/groups/public&lt;/<span class="kw">url</span>&gt;</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">repository</span>&gt;</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">dependency</span>&gt;</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">groupId</span>&gt;sc.fiji&lt;/<span class="kw">groupId</span>&gt;</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">artifactId</span>&gt;bigdataviewer-vistools&lt;/<span class="kw">artifactId</span>&gt;</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">version</span>&gt;1.0.0-beta-29&lt;/<span class="kw">version</span>&gt;</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">dependency</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If you prefer to run <a href="https://docs.oracle.com/javase/9/jshell/introduction-jshell.htm#JSHEL-GUID-630F27C8-1195-4989-9F6B-2C51D46F52C8">JShell</a> directly, you can pull in the dependencies from a complete Maven POM with John Pooth’s Maven Jshell plugin</p>
+<pre><code>mvn compile com.github.johnpoth:jshell-maven-plugin:1.3:run</code></pre>
+<p>Happy JShelling!</p>
+<p>P.S.:</p>
+<p>The original IJava kernel currently does not build with Java 17 or 18, so if you prefer this over the above fork, or if you do not care about the latest greatest language features in Java 17, then the easiest at this time is to use OpenJDK-11. If you don’t have it yet, install it via conda:</p>
+<pre><code>conda install openjdk
+conda install -c conda-forge maven</code></pre>
+<p>However, this may take a day of solving environments, so you can also install it globally:</p>
+<pre><code>sudo apt install openjdk-11-jdk maven</code></pre>
+<p>If you have other versions installed, you can switch between them with the <code>alternatives</code> tool:</p>
+<pre><code>sudo update-alternatives --config java
+sudo update-alternatives --config javac</code></pre>
+<p>Now check out the original IJava and build and install the kernel IJava Jupyter kernel following <a href="https://github.com/SpencerPark/IJava#install-from-source">the installation instructions</a> or:</p>
+<pre><code>git clone https://github.com/SpencerPark/IJava.git
+cd IJava/
+./gradlew installKernel
+jupyter kernelspec list</code></pre>
+<p>Done.</p>
 
 
 
-</section>
-</section>
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

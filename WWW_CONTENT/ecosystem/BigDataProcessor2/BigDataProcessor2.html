@@ -63,7 +63,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -140,12 +140,9 @@ ul.task-list li input[type="checkbox"] {
     <div class="quarto-title column-body">
       <h1 class="title">BigDataProcessor2</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">imglib2</div>
-                <div class="quarto-category">n5</div>
+                <div class="quarto-category">Fiji/ImageJ</div>
+                <div class="quarto-category">BigDataViewer</div>
                 <div class="quarto-category">hdf5</div>
-                <div class="quarto-category">zarr</div>
-                <div class="quarto-category">jupyter</div>
-                <div class="quarto-category">notebook</div>
               </div>
                   </div>
   </div>
@@ -154,31 +151,40 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-  <ul>
-  <li><a href="#load-some-data---title" id="toc-load-some-data---title" class="nav-link active" data-scroll-target="#load-some-data---title">Load some data - title</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <div class="quarto-about-jolla">
  <main class="content quarto-banner-title-block" id="quarto-document-content">
-
 <p><img src="BDP2-icon.png" class="img-fluid" width="200"></p>
-<section id="load-some-data---title" class="level1">
-<h1>Load some data - title</h1>
-<p>Now, we register a simple renderer that uses <a href="https://github.com/imglib/imglib2-ij/blob/master/src/main/java/net/imglib2/img/display/imagej/ImageJFunctions.java">ImgLib2’s ImageJ bridge</a> and <a href="https://github.com/SpencerPark/jupyter-jvm-basekernel/blob/master/src/main/java/io/github/spencerpark/jupyter/kernel/display/common/Image.java">Spencer Park’s image renderer</a> to render the first 2D slice of a <code>RandomAccessibleInterval</code> into the notebook. We also add a renderer for arrays and maps, because we want to list directories and attributes maps later.</p>
+<p>BigDataProcessor2 (BDP2) is a Fiji plugin for interactive processing of TB-sized image data.</p>
+<p>BDP2 uses BigDataViewer for rendering and the ImgLib2 library for image processing.</p>
+<p>The BDP2 is the new version of BigDataProcessor1.</p>
+<p>Main features:</p>
+<p>lazy-loading of TB sized image data lazy-processing of TB sized image data ImageJ macro scripting support</p>
 
 
-</section>
 </main> 
   <hr class="about-sep">
    <div class="about-links">
   <a href="mailto:anemail@adress.com" class="about-link" rel="" target="">
     <i class="bi bi-envelope"></i>
      <span class="about-link-text">Contact</span>
+  </a>
+  <a href="https://github.com/bigdataprocessor/bigdataprocessor2/blob/master/README.md" class="about-link" rel="" target="">
+    <i class="bi bi-github"></i>
+     <span class="about-link-text">Documentation</span>
+  </a>
+  <a href="https://doi.org/10.1093/bioinformatics/btab106" class="about-link" rel="" target="">
+    <i class="bi bi-book"></i>
+     <span class="about-link-text">Publication</span>
+  </a>
+  <a href="https://www.youtube.com/watch?t=4534&amp;v=LHI7vXiUUms&amp;feature=youtu.be" class="about-link" rel="" target="">
+    <i class="bi bi-youtube"></i>
+     <span class="about-link-text">Tutorial</span>
+  </a>
+  <a href="https://imagej.net/plugins/big-data-processor-2" class="about-link" rel="" target="">
+    <i class="bi bi-image"></i>
+     <span class="about-link-text">Fiji-imageJ</span>
   </a>
 </div>
 </div>
