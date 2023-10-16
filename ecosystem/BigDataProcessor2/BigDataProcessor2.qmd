@@ -13,20 +13,29 @@ about:
       icon: envelope
       href: mailto:anemail@adress.com
     - text: Documentation
-      icon: envelope
+      icon: github
       href: https://github.com/bigdataprocessor/bigdataprocessor2/blob/master/README.md
     - text: Publication
-      icon: envelope
+      icon: book
       href: https://doi.org/10.1093/bioinformatics/btab106
+    - text: Tutorial
+      icon: youtube
+      href: https://www.youtube.com/watch?t=4534&v=LHI7vXiUUms&feature=youtu.be
     - text: Fiji-imageJ
-      icon: envelope
-      href: https://imagej.net/plugins/big-data-processor-
+      icon: image
+      href: https://imagej.net/plugins/big-data-processor-2
 ---
 
  ![](BDP2-icon.png){width=200}
  
-BIgdataProcessor is a fast data processing plugin for Fiji based on bigdataviewer that has many 
+BigDataProcessor2 (BDP2) is a Fiji plugin for interactive processing of TB-sized image data.
 
+BDP2 uses BigDataViewer for rendering and the ImgLib2 library for image processing.
 
-## 33 
-bbbbb
+The BDP2 is the new version of BigDataProcessor1.
+
+Main features:
+
+lazy-loading of TB sized image data
+lazy-processing of TB sized image data
+ImageJ macro scripting support
