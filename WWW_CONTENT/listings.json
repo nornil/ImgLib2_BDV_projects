@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/blog_posts/2022-10-30-Adding-Stream-support-to-ImgLib2/2022-10-30-Adding-Stream-support-to-ImgLib2.html",
       "/blog_posts/2022-09-27-n5-imglib2/2022-09-27-n5-imglib2.html",
       "/blog_posts/2022-09-14-how-to-display-imglib2-data/2022-09-14-how-to-display-imglib2-data.html",
       "/blog_posts/2022-08-08-keymaps/2022-08-08-keymaps.html",
@@ -29,6 +30,7 @@
     "listing": "/ecosystem.html",
     "items": [
       "/ecosystem/Mastodon/Mastodon.html",
+      "/ecosystem/TEMPLATE/TEMPLATE.html",
       "/ecosystem/BigDataProcessor2/BigDataProcessor2.html"
     ]
   }
