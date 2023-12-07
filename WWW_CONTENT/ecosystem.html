@@ -35,7 +35,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -175,30 +174,17 @@ ul.task-list li input[type="checkbox"] {
       <h1 class="title">Ecosystem</h1>
                       </div>
   </div>
-    
-  
   <div class="quarto-title-meta">
-
-      
-    
-      
     </div>
-    
-  
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="BigDataViewer">BigDataViewer <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Fiji/ImageJ">Fiji/ImageJ <span class="quarto-category-count">(3)</span></div><div class="category" data-category="ImgLib2">ImgLib2 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="hdf5">hdf5 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="imglib2">imglib2 <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
-
-
-
-
+<div class="quarto-about-jolla column-page-left">
+ <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 <p>Below follows an non-exhaustive list of Fiji plugins and other software that uses either ImgLib2 or BigDataViewer:</p>
-
-
 
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
@@ -219,7 +205,6 @@ ul.task-list li input[type="checkbox"] {
 Mastodon
 </h3>
 <div class="listing-subtitle">
-
 </div>
 </a>
 <div class="listing-categories">
@@ -253,7 +238,6 @@ Mastodon is a large-scale tracking and track-editing framework for large, multi-
 TEMPLATE software/plugin
 </h3>
 <div class="listing-subtitle">
-
 </div>
 </a>
 <div class="listing-categories">
@@ -287,7 +271,6 @@ First sentence will appear also on the ecosystem page…
 BigDataProcessor2
 </h3>
 <div class="listing-subtitle">
-
 </div>
 </a>
 <div class="listing-categories">
@@ -315,7 +298,16 @@ BigDataProcessor2 (BDP2) is a Fiji plugin for interactive processing of TB-sized
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-</div></main> <!-- /main -->
+</div></main> 
+  <hr class="about-sep">
+   <div class="about-links">
+  <a href="/ecosystem.html" class="about-link" rel="" target="">
+    <i class="bi bi-arrow-up"></i>
+     <span class="about-link-text">to top</span>
+  </a>
+</div>
+</div>
+ <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -336,13 +328,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
